@@ -1,0 +1,441 @@
+
+
+body {
+    background-color: #ffffff;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    z-index: 10; /* Ensure the header is always above the rest */
+}
+  .logo {
+    margin-top: 5px;
+    width: 80px;
+    height: 65px;
+    border-radius: 100px;
+    background-color: white
+  }
+  
+  .header-1 {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    font-size: 25px;
+    justify-content: space-between;
+  }
+  .header-1 a {
+    cursor: pointer;
+    display: flex;
+    color: rgb(67, 94, 94);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    align-items: center;
+  }
+  .nav-link {
+    display: inline-block;
+    margin-top: 23px;
+    margin-right: 50px;
+    margin-left: 70px;
+  
+    justify-content: space-between;
+    text-decoration: none;
+    text-align: center;
+  }
+  .nav-bar {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .nav-bar li a {
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 2; /* Ensure it's above the service images */
+}
+  .nav-bar li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-bar li:hover::after {
+    width: 100%;
+  }
+  
+  .nav-bar li a:hover {
+    font-size: 23px;
+    color: rgb(197, 25, 25);
+    font-weight: 600;
+}
+
+/* Main heading section */
+.main-heading {
+    margin-top: 100px;
+    margin-left: 40px;
+
+    line-height: 1.1;
+    font-weight: 300;
+    text-align: left;
+}
+.heading {
+    font-family: "Playfair Display", serif;
+    font-size: 70px;
+  }
+  
+  .subheading {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+
+  
+  /*================================================
+  Start Important Part
+  ==================================================*/
+  
+  .underline--magical {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    &:hover {
+      background-size: 100% 88%;
+    }
+  }
+  
+  /*================================================
+  End Important Part
+  ==================================================*/
+.main-heading h1 {
+    margin: 0;
+}
+
+/* Gradient colors for heading */
+.highlight {
+    display: inline-block;
+    background: linear-gradient(120deg, #FF6347, #32CD32, #FF6347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Image gallery */
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 50px auto;
+    max-width: 90%;
+    gap: 15px;
+}
+
+.image-gallery img {
+    width: 100%;
+  
+    object-fit: cover;
+}
+
+.image-gallery .img1 { height: 500px; margin-bottom: 30px; }
+.image-gallery .img2 { height: 500px; margin-bottom: 50px; }
+.image-gallery .img3 { height: 500px; margin-bottom: 130px; }
+.image-gallery .img4 { height: 500px; margin-bottom: 80px; }
+
+
+/* Services section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Increased gap */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.service {
+    position: relative;
+
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    z-index: 2; /* Ensure service elements don't overlap the navbar */
+}
+
+
+/* Separate backgrounds for title and description */
+.service h2 {
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Service colors */
+.service1 { background-color: #E64848; }
+.service2 { background-color: #7E60BF; }
+.service3 { background-color: #135D66; }
+.service4 { background-color: #7286D3; }
+
+.service1 img { background-color: #fff; }
+.service2 img { background-color: #FFE1FF; }
+.service3 img { background-color: #E3FEF7; }
+.service4 img { background-color: #B4E4FF; }
+
+/* Service image */
+.service img {
+    width: 300px; /* Reduced size */
+    height: 300px; /* Reduced size */
+    object-fit: contain;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; /* Lower z-index to prevent overlapping navbar */
+    padding: 10px;
+    margin: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensure no overflow */
+}
+.service div {
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+/* Ethos section */
+.ethos-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.ethos-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ethos-section .ethos-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Ethos card background with SVG gradient */
+.ethos-card {
+    background-color:#bb99ff;
+
+    background-image:
+    radial-gradient(at 56% 32%, hsla(10,100%,91%,1) 0px, transparent 50%),
+    radial-gradient(at 54% 73%, hsla(308,100%,91%,1) 0px, transparent 50%),
+    radial-gradient(at 79% 73%, hsla(113,100%,91%,1) 0px, transparent 50%),
+    radial-gradient(at 12% 25%, hsla(205,100%,91%,1) 0px, transparent 50%),
+    radial-gradient(at 3% 90%, hsla(273,100%,91%,1) 0px, transparent 50%),
+    radial-gradient(at 4% 15%, hsla(110,100%,91%,1) 0px, transparent 50%),
+    radial-gradient(at 64% 99%, hsla(16,100%,91%,1) 0px, transparent 50%);
+  background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+    width: 180px;
+    height: 220px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border: #dcd7d7 3px solid;
+    color: black; 
+    font-size: 20px;
+    /* Ensure text is white for readability */
+}
+
+
+/* Hover effect for ethos cards */
+.ethos-card:hover {
+    transform: translateY(-10px);
+    opacity: 0.9; /* Slightly reduce opacity on hover for effect */
+}
+
+.ethos-card h3 {
+    color: #fff;
+    margin: 15px 0;
+    font-size: 30px;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #111;
+    padding: 60px;
+    text-align: left;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 3px solid #FFD700;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.footer-column p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #FFD700;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    color: black;
+  border: 2px solid black;
+   width: 300px;
+    
+    height: 400px;
+
+    margin: 10px;
+    position: relative;
+}
+
+
+.front,
+.back {
+    display: flex;
+
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+   
+    transition: ease-in-out 1000ms;
+}
+
+.front {
+  background-color: #135D66;
+    font-size: 1.618rem;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    font-family: Poppins, sans-serif;
+}
+
+.front::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .25;
+    z-index: -1;
+}
+
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+
+
+.back {
+    background: #fff;
+    transform: rotateY(-180deg);
+    padding: 0 2em;
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+ */

@@ -1,0 +1,529 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Spicy+Rice&display=swap');
+  
+  
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    z-index: 1;
+  }
+  .logo {
+    margin-top: 5px;
+    width: 80px;
+    height: 65px;
+    border-radius: 100px;
+  }
+  
+  .header-1 {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    font-size: 25px;
+    justify-content: space-between;
+  }
+  .header-1 a {
+    cursor: pointer;
+    display: flex;
+    color: rgb(67, 94, 94);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    align-items: center;
+  }
+  .nav-link {
+    display: inline-block;
+    margin-top: 23px;
+    margin-right: 50px;
+    margin-left: 70px;
+  
+    justify-content: space-between;
+    text-decoration: none;
+    text-align: center;
+  }
+  .nav-bar {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .nav-bar button{
+    margin-right: 30px;
+    border: none;
+    font-size: 20px;
+  }
+  .nav-bar li a {
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  
+  .nav-bar li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-bar li:hover::after {
+    width: 100%;
+  }
+  
+  .nav-bar li a:hover {
+    font-size: 23px;
+    color: rgb(197, 25, 25);
+    font-weight: 600;
+  }
+  .sidebar {
+    width: 280px;
+    background: white;
+    color: #000000;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 6%;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+body{
+    background-color: #F7F9F2;
+
+}
+.sidebar h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #ffeb3b;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 .highlight {
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #ffeb3b;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 5px #ffeb3b;
+    }
+    to {
+        text-shadow: 0px 0px 15px #ffffff;
+    }
+}
+
+.section h3 {
+    font-size: 25px;
+    margin: 20px 0 10px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ffeb3b;
+    padding-bottom: 10px;
+}
+
+.section ul {
+    list-style: none;
+    margin-left: 10px;
+    padding-left: 0;
+}
+
+.section ul li {
+    padding: 12px;
+    font-size: 20px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.section ul li:hover {
+    background: rgb(255, 96, 96);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.count {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.section ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Adjusting space between items evenly */
+.section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Add transition effect to badges and count */
+.badge, .count {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.badge:hover, .count:hover {
+    background-color: #f44336;
+    transform: scale(1.1);
+}
+
+.main-content {
+    margin-left: 300px;
+    padding: 20px;
+ 
+    min-height: 100vh;
+    padding-top: 80px; 
+    width: 65%;/* Added padding to avoid overlap with fixed floating tabs */
+}
+
+
+.floating-bar {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 40px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.884);
+    gap: 30px;
+}
+
+.category-tabs button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #333;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 120px;
+}
+
+.category-tabs button:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+.category-tabs button.active {
+    border: 5px solid #ff6b6b;
+   
+}
+
+.floating-add-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    color: white;
+    background: #4caf50;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.floating-add-btn:hover {
+    background: #43a047;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 700px;
+    height: 70%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 3px solid rgb(248, 120, 120);
+     
+}
+
+
+.popup-content p {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.popup-content span{
+    margin-left: 90%;
+}
+.popup-content .post-title input,
+.popup-content .post-description textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 30px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.popup-content button {
+    padding: 12px 30px;
+    font-size: 30px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    display: flex; 
+}
+
+.popup-content button:hover {
+    background-color: #43a047;
+   
+}
+
+
+.post-card {
+    display: flex;
+    background: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.post-card .avatar {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.post-card .post-content {
+    flex-grow: 1;
+}
+
+.post-card .post-content .title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.post-card .post-content .body {
+    font-size: 50px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.post-card .post-content .comments-section {
+    display: block;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 50px;
+    color: #333;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+.post-content h3{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.post-content p{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.top-users {
+    position: fixed;
+    right: 0px;
+    top: 10%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-users h4 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.user-list .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-list .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-list .user .points {
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+.user{
+    font-size: 20px;
+    margin-right: 30px;
+}
+.comment-btn {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    padding: 5px;
+}
+.comment-btn svg{
+    height: 40px;
+    width: 40px;
+}
+.comment-btn:hover {
+    color: #ff6b6b;
+}
+
+
+.post-votes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.post-votes span{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.post-votes button {
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.post-votes button:hover {
+    color: #4caf50;
+}
+
+
+.comment {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.comment .user-name {
+    font-weight: bold;
+    color: #4caf50;
+    margin-right: 10px;
+}
+
+.comment .text {
+    flex-grow: 1;
+}
+
+.comment .timestamp {
+    font-size: 14px;
+    color: #888;
+}
+
+
+.add-comment input {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.add-comment button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background-color: #43a047;
+}
+.post-votes svg{
+    height: 40px;
+    width: 40px;
+}
