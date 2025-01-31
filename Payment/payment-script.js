@@ -64,6 +64,6 @@ window.onload = function() {
   function submitPayment() {
     alert('Payment submitted successfully!');
     // You can integrate actual payment gateway APIs here
-    window.location.href = '/Main/index.html';  // Redirects to the home page (app.html)
+    window.location.href = '/index.html';  // Redirects to the home page (app.html)
   }
   
