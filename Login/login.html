@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/Login/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div>
+            <nav class="header-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="logo" class="logo" />
+                    GO-PRO!
+                </a>
+                <ul>
+                    <div class="nav-bar">
+                        <li class="nav-link"><a href="/plans/pcard.html">Book Now</a></li>
+                        <li class="nav-link"><a href="/About/about.html">Know More</a></li>
+                        <li class="nav-link"><a href="/Community/com.html">Community</a></li>
+                        <li class="nav-link"><a href="/Contact/contact.html">Contact Us</a></li>
+                        <li class="nav-link"><a href="/Login/login.html">Log In</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><img src="/images/google.png"></a>
+                    <a href="#" class="icon"><img src="/images/facebook.png"></a>
+                    <a href="#" class="icon"><img src="/images/github.png"></a>
+                    <a href="#" class="icon"><img src="/images/linkedin.png"></a>
+                </div>
+                <span>or use Email for registration</span>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>SIGN IN</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><img src="/images/google.png"></a>
+                    <a href="#" class="icon"><img src="/images/facebook.png"></a>
+                    <a href="#" class="icon"><img src="/images/github.png"></a>
+                    <a href="#" class="icon"><img src="/images/linkedin.png"></a>
+                </div>
+                <span>or use Email and Password</span>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#" id="f-pass">Forgot Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Already a member?</h1>
+                    <p>Enter your deails to use all of our site features.</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>New Here?</h1>
+                    <p>Register on this portal to access all amazing features of our site.</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Login/login.js"></script>
+</body>
+</html>

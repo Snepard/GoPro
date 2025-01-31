@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Layout</title>
+    <link rel="stylesheet" href="/Community/com.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+        <div class="header">
+            <div>
+                <nav class="header-1">
+                    <a href="/index.html">
+                        <img src="/images/logo.png" alt="logo" class="logo" />
+                        GO-PRO!
+                    </a>
+                    <ul>
+                        <div class="nav-bar">
+                            <li class="nav-link"><a href="/plans/pcard.html">Book Now</a></li>
+                            <li class="nav-link"><a href="/About/about.html">Know More</a></li>
+                            <li class="nav-link"><a href="/Community/com.html">Community</a></li>
+                            <li class="nav-link"><a href="/Contact/contact.html">Contact Us</a></li>
+                            <li class="nav-link"><a href="/Login/login.html">Log In</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+<!-- Sidebar -->
+<aside class="sidebar">
+  
+    <div class="section">
+        <h3>Match Alerts</h3>
+        <ul>
+            <li><span>Inbox</span><span class="count">3</span></li>
+            <li><span>Draft</span></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h3>Teams</h3>
+        <ul>
+            <li><span>Training Team</span><span class="badge">+2</span></li>
+            <li><span>Research Group</span><span class="badge">+3</span></li>
+            <li><span>Match Planning</span><span class="badge">+5</span><span class="count">24</span></li>
+            <li><span>Create New Team</span></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h3>Cricket Channels</h3>
+        <ul>
+            <li><span>Cricket News</span></li>
+            <li><span>Match Discussions</span></li>
+            <li><span>Player Insights</span></li>
+            <li><span>Upcoming Matches</span></li>
+            <li><span>Team Strategies</span></li>
+        </ul>
+    </div>
+</aside>
+
+<!-- Main Content -->
+<main class="main-content">
+    <section class="post-section">
+        <div class="content" id="postContainer">
+            <!-- Posts will be inserted here dynamically -->
+        </div>
+    </section>
+</main>
+
+<!-- Floating Button and Tab Bar -->
+<div class="floating-bar">
+    <div class="category-tabs">
+        <button onclick="showPosts('all')">All</button>
+        <button onclick="showPosts('popular')">Popular</button>
+        <button onclick="showPosts('latest')" class="latest">Latest</button>
+        <button onclick="showPosts('following')">Following</button>
+    </div>
+    <button class="floating-add-btn" onclick="toggleAddPostForm()">+</button>
+</div>
+
+<!-- Add Post Popup -->
+<div id="addPostPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="toggleAddPostForm()">X</span>
+     
+        <p>Share your thoughts or ask a question!</p>
+        <div class="post-title">
+            <input type="text" class="writeText" placeholder="Title" id="writeTextTitle" autocomplete="off" required>
+        </div>
+        <div class="post-description">
+            <textarea class="writeText" placeholder="Body text (optional)" id="writeTextContent" autocomplete="off"></textarea>
+        </div>
+        <button onclick="selfPost()">Post</button>
+    </div>
+</div>
+
+<!-- Sidebar User List -->
+<aside class="top-users">
+    <h4>Top Users</h4>
+    <div class="user-list">
+        <div class="user"><img src="/images/avatar/avatar1.webp" alt="User Avatar">Aryaman<span class="points">15.5k</span></div>
+        <div class="user"><img src="/images/avatar/avatar2.webp" alt="User Avatar">Krrish<span class="points">12.8k</span></div>
+        <div class="user"><img src="/images/avatar/avatar3.webp" alt="User Avatar">AsyaDali<span class="points">6.9k</span></div>
+        <div class="user"><img src="/images/avatar/avatar5.png" alt="User Avatar">Parmar<span class="points">1.2k</span></div>
+
+        <div class="user"><img src="/images/avatar/avatar4.webp" alt="User Avatar">Arunima<span class="points">2.2k</span></div>
+        <div class="user"><img src="/images/avatar/avatar6.webp" alt="User Avatar">You<span class="points">330</span></div>
+    </div>
+</aside>
+
+<!-- Script -->
+<script src="/Community/com.js"></script>
+</body>
+</html>

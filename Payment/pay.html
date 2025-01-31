@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing Page</title>
+  <link rel="stylesheet" href="/Payment/pay.css">
+</head>
+<body>
+
+  <div class="billing-container">
+    <h2 class="billing-title">Billing Information</h2>
+    
+    <form id="billing-form">
+      <div class="input">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+
+      <div class="input">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+      </div>
+
+      <div class="input">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" required placeholder="Enter amount" min="1" value={amount}>
+      </div>
+
+      <div class="payment-method">
+        <h3>Select Payment Method</h3>
+        <div class="payment-options">
+          <div class="payment-option">
+            <input type="radio" id="netbanking" name="payment-method" value="Net Banking" required>
+            <label for="netbanking">Net Banking</label>
+          </div>
+          <div class="payment-option">
+            <input type="radio" id="upi" name="payment-method" value="UPI" required>
+            <label for="upi">UPI</label>
+          </div>
+          <div class="payment-option">
+            <input type="radio" id="credit-card" name="payment-method" value="Credit Card" required>
+            <label for="credit-card">Credit Card</label>
+          </div>
+          <div class="payment-option">
+            <input type="radio" id="debit-card" name="payment-method" value="Debit Card" required>
+            <label for="debit-card">Debit Card</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="coupon">
+        <label for="coupon">Have a Coupon?</label>
+        <input type="text" id="coupon" name="coupon" placeholder="Enter coupon code">
+        <button type="button" id="apply-coupon" onclick="applyCoupon()">Apply</button>
+        <p id="coupon-status"></p>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="proceedToPayment()">Proceed to Payment</button>
+    </form>
+  </div>
+
+  <script src="/Payment/pay.js"></script>
+</body>
+</html>
